@@ -1,0 +1,57 @@
+[
+  [
+    { "op" : "test", "path" : "/animatedParts", "inverse": true },
+    { "op" : "add", "path" : "/animatedParts", "value": {} }
+  ],
+  [
+    { "op" : "test", "path" : "/animatedParts/stateTypes", "inverse": true },
+    { "op" : "add", "path" : "/animatedParts/stateTypes", "value": {} }
+  ],
+  [
+    { "op" : "test", "path" : "/animatedParts/parts", "inverse": true },
+    { "op" : "add", "path" : "/animatedParts/parts", "value": {} }
+  ],
+  [
+    { "op" : "test", "path" : "/transformationGroups", "inverse": true },
+    { "op" : "add", "path" : "/transformationGroups", "value": {} }
+  ],
+  [
+    {
+      "op": "add",
+      "path": "/animatedParts/stateTypes/pat_flowered",
+      "value": {
+        "default": "h",
+        "states": {
+          "h": {
+            "frames" : 78,
+            "cycle" : 5.125,
+            "mode" : "loop",
+            "properties": { "persistentSound": "/pat/flowered/flowered.ogg" }
+          }
+        }
+      }
+    },
+    {
+      "op": "add",
+      "path": "/animatedParts/parts/pat_flowered",
+      "value" : {
+        "properties" : {
+          "fullbright" : true,
+          "centered" : true,
+          "offset" : [0, 37.5],
+          "zLevel" : 69420,
+          "scale" : 0.1,
+          "transformationGroups" : [ "pat_flowered" ]
+        },
+        "partStates" : {
+          "pat_flowered" : {
+            "h" : {
+              "properties" : { "image" : "/pat/flowered/flowered.png:<frame>" }
+            }
+          }
+        }
+      }
+    },
+    { "op" : "add", "path" : "/transformationGroups/pat_flowered", "value" : {} }
+  ]
+]
